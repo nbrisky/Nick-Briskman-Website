@@ -805,3 +805,63 @@ h3 {
 .linkedin-button svg {
     flex-shrink: 0;
 }
+
+/* Core Values Section */
+.values-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 2.5rem;
+}
+
+.value-card {
+    background: var(--bg-blue-light);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-light);
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
+}
+
+.value-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.value-card h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+.value-card p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .value-card {
+        padding: 1.8rem;
+    }
+    
+    .value-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
